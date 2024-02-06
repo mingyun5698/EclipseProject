@@ -1,4 +1,4 @@
-package chap_03;
+package chap_04;
 
 public class Quiz {
 
@@ -76,19 +76,19 @@ public class Quiz {
 		
 		switch(role) {
 		case "feeding" :
-			if (time == 9||time == 12||time == 18 && safetyRating < 6) {
+			if (time == 9 ||time == 12 ||time == 18 && safetyRating < 8) {
 				System.out.println("먹이를 먹이세요");
 			} else {
 				System.out.println("먹이를 주지 마세요");
 			} break;
 		case "cleaner" :
-			if (time == 9 || time==18 && safetyRating < 6) {
+			if (time == 9 || time==18 && safetyRating < 7) {
 				System.out.println("청소를 하세요");
 			} else {
 				System.out.println("청소를 하지 마세요");
 			} break;
 		case "tour guiding" :
-			if (time == 11 || time > 15 || time < 18 && safetyRating < 5) {
+			if (time == 10 || time > 15 || time < 18 && safetyRating < 6) {
 				System.out.println("투어 가이드를 하세요 ");
 			} else {
 				System.out.println("투어 가이드를 하지 마세요");
