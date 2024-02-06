@@ -1,4 +1,4 @@
-package Mesozoic;
+package chap_01;
 
 public class Mesozoic {
 
