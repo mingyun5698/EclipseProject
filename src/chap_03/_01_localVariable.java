@@ -1,6 +1,6 @@
 package chap_03;
 
-public class _01_Switch {
+public class _01_localVariable {
 
 	public static void main(String[] args) {
         int x = 1;

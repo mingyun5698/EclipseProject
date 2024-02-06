@@ -30,9 +30,9 @@ public class Quiz {
 		int yearsExperience = 7;
 		
 		if (yearsExperience > dinosaurType ) {
-			System.out.println("공룡을 다루기에 충분합니다.");
+			System.out.println("당신은 공룡을 다루기에 충분합니다.");
 		} else {
-			System.out.println("공룡을 다루기에 불충분합니다.");
+			System.out.println("당신은 공룡을 다루기에 불충분합니다.");
 		}
 		
 		int safetyRating = 8;
@@ -70,19 +70,32 @@ public class Quiz {
 		} else 
 			System.out.println("먹이를 많이 주세요");
 		
-		int time = 9;
-		safetyRating = 5;
+		int time = 10;
+		safetyRating = 7;
 		String role = "feeding";
 		
-		if (time == 9 || role == "feeding" || safetyRating < 7 || time==12 || time==6) {
-			System.out.println("먹이를 주세요");
-		} else if (time == 10 || role == "cleaning" || safetyRating < 7) {
-			System.out.println("청소를 하세요");
-		} else if (time == 10 || role == "tour guiding" || safetyRating < 7) {
-			System.out.println("투어 가이드를 하세요.");
-		} else {
-			System.out.println("쉬세요");
-		}
+		switch(role) {
+		case "feeding" :
+			if (time == 9||time == 12||time == 18 && safetyRating < 6) {
+				System.out.println("먹이를 먹이세요");
+			} else {
+				System.out.println("먹이를 주지 마세요");
+			} break;
+		case "cleaner" :
+			if (time == 9 || time==18 && safetyRating < 6) {
+				System.out.println("청소를 하세요");
+			} else {
+				System.out.println("청소를 하지 마세요");
+			} break;
+		case "tour guiding" :
+			if (time == 11 || time > 15 || time < 18 && safetyRating < 5) {
+				System.out.println("투어 가이드를 하세요 ");
+			} else {
+				System.out.println("투어 가이드를 하지 마세요");
+			} break;
+		} 
+		
+			
 
 	}
 

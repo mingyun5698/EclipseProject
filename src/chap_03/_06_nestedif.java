@@ -11,8 +11,9 @@ public class _06_nestedif {
 		
 		System.out.println("Enter month -> " + FEB);
 		
-		int numDays=0;
+
 		int month = 2;
+		int numDays;
 		if(month == JAN || month == MAR || month == MAY || month  ==JUL || month == OCT || month == DEC) {
 		   numDays=31;
 		} else if (month == APR || month == JUN || month == SEP || month == NOV) {
