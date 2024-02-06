@@ -8,7 +8,7 @@ public class _01_while {
 		boolean keepGoing = false;
 		do {
 			Scanner sc = new Scanner(System.in);
-			System.out.println("Enter a number (negative number to exit) -> ");
+			System.out.print("Enter a number (negative number to exit) -> ");
 			int n = sc.nextInt();
 			if(n<0) {
 				keepGoing = false;
