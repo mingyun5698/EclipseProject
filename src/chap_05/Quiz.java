@@ -11,17 +11,17 @@ public class Quiz {
 		int pull = 0;
 		do {
 			pull++;
-			System.out.println("공룡에게 밥을 줍니다.");
-		
-			
+			System.out.println("공룡에게 밥을 줍니다.");					
 		} while (pull < 10);
 		System.out.println("공룡이 배가 부릅니다.");
+		
 		// 3번연습
 		int count = 10;
 		while (count>=0) {
 			System.out.println("공원 개장 카운트 다운 : " + count);
 			count--;
 				}	
+		
 		// 4번연습
 		int[] weight = {500, 400, 1100, 600, 750};
 		int sum = 0;
@@ -37,6 +37,7 @@ public class Quiz {
 			ticket--;
 			System.out.println("티켓 판매를 완료했습니다. 남은 티켓 : " + ticket);
 		} System.out.println("티켓을 모두 팔았습니다.");
+		
 		// 6번연습
 		int securityPoint = 0;
 		int securityStandards = 10;
@@ -86,13 +87,14 @@ public class Quiz {
 		time = 0;
 		while(time<24) {
 			if (myDino == "T_Rex") {
-				for (int i=0; i<T_Rex.length; i++) {
+				for (int i = 0; i < T_Rex.length; i++) {
 					if(T_Rex[i] == time) {
 						System.out.println(myDino + "는 " + time + "시에 " + T_RexNeedFood + "kg 밥을 먹어야합니다.");
 					}
 				}
-			} else if (myDino == "Brachiodaurus") {
-				for (int i=0; i<Brachiodaurus.length; i++) {
+			} 
+			else if (myDino == "Brachiodaurus") {
+				for (int i = 0; i < Brachiodaurus.length; i++) {
 					if(Brachiodaurus[i] == time) {
 						System.out.println(myDino + "는 " + time + "시에 " + BrachiodaurusNeedFood + "kg 밥을 먹어야합니다.");
 					}
@@ -101,10 +103,6 @@ public class Quiz {
 		time ++;
 		}
 		
-		
-		
 	} 	
-	
-		
 
 }
