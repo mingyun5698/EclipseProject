@@ -2,13 +2,18 @@ package chap_07;
 import java.util.*;
 
 public class Management {
+	 static String[] dinoNames = new String[5];
+	 static Scanner sc = new Scanner(System.in);
+	
 	public void start() {
 		while (true) {
 			displayMenu();
-			int choice = scanner.nextInt();
+			int choice = sc.nextInt();
 			handleMenuChoice(choice);
 		}
 	}
+	
+	
 	
 	public void displayMenu() {
 		System.out.println("Welcome to Mesozoic Eden Assistant!");
@@ -40,8 +45,6 @@ public class Management {
 	}
 	
 	public static void addDinosaur() {
-		Scanner sc = new Scanner(System.in);
-		String[] dinoNames = new String[5]; 
 		System.out.print("첫번째 공룡의 이름을 쓰세요 -> ");
 		dinoNames[0] = sc.next();
 		System.out.print("두번째 공룡의 이름을 쓰세요 -> ");
@@ -60,25 +63,22 @@ public class Management {
 	}
 	
 	public static void greetGuest() {
-		Scanner sc = new Scanner(System.in);
 		System.out.print("당신의 이름을 입력하세요 -> ");
 		String name = sc.next();
-		System.out.println("환영합니다. " + name + "님.");
+		System.out.println("환영합니다. " + name + "님. 현재 있는 공룡은 " + dinoNames[0] + ", "+ dinoNames[1] + ", "+ dinoNames[2] + ", "+ dinoNames[3] + ", "+ dinoNames[4] + "가 있습니다.");
 	}
 	
 	public static void checkVisitorsCount() {
 		System.out.print("입장 인원을 입력하세요 -> ");
-		Scanner sc = new Scanner(System.in);
 		int number = sc.nextInt();
 		if (number > 50) {
-			System.out.println("총 인원이 500명이 초과되어 입장할 수 없습니다. 현재 인원 : 450명");
+			System.out.println(number-50 + "명이 초과되어 입장할 수 없습니다. 입장 가능한 인원 : 50명");
 		} else {
 			System.out.println("환영합니다. 남은 입장 수 : " + (50-number));
 		}
 	}
 	
 	public static void manageStaff() {
-		Scanner sc = new Scanner(System.in);
 		System.out.print("직원의 이름을 입력하세요 -> ");
 		String staffName = sc.next();
 		System.out.print("직원의 나이를 입력하세요 -> ");
@@ -87,7 +87,6 @@ public class Management {
 	}
 	
 	
-	Scanner scanner = new Scanner(System.in);
 	public static void main(String[] args) {
 		Management main = new Management();
 		main.start();
