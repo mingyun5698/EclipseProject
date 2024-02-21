@@ -19,7 +19,7 @@ public class this_ {
 	}
 
 	public static void main(String[] args) {
-		
+		this_ t1 = new this_("김민균", 1);
 
 	}
 

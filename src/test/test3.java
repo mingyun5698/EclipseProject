@@ -2,11 +2,16 @@ package test;
 
 public class test3 {
 
+	String name;
+	
+	test3(String name) {
+		this.name=name;
+	}
+	
+	
 	public static void main(String[] args) {
-		String[] a1 = {"김"};
-		String[] a2 = {"김"};
+		test3 t1 = new test3("김민균");
 		
-		System.out.println(a1[0].equals(a2));
 
 
 	}

@@ -4,5 +4,5 @@
 /**
  * 
  */
-module Project {
+module EclipseProject {
 }

@@ -10,7 +10,7 @@ public class _04_Method {
 	public static void main(String[] args) {
 		   m1();                      // 0
 		     m1(1);                     // 1
-		     m1(1, 2);                  // 3
+		     m1(1, 2);                 // 3
 		     m1(1, 2, 3);               // 6
 
 	}
