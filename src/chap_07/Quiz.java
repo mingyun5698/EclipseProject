@@ -17,6 +17,10 @@ public class Quiz {
 			System.out.println("성체입니다.");
 		}
 		
+		if(age>15) {
+			System.out.println("성체입니다.");
+		}
+		
 		
 	}
 	
