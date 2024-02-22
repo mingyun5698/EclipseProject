@@ -1,4 +1,4 @@
-package management2;
+package chap_09.management2;
 
 abstract public class Dinasaur {
 	String name;

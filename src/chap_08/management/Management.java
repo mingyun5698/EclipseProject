@@ -1,4 +1,4 @@
-package management;
+package chap_08.management;
 import java.util.Scanner;
 
 
