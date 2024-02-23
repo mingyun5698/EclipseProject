@@ -15,6 +15,14 @@ public class test2 {
 		a1.greeting();
 		a2.greeting();
 		a3.greeting();
+		
+		System.out.println("------------------------------");
+		
+		
+		System.out.println(a1.getA());
+		System.out.println(a2.getA());
+		System.out.println(a3.getA());
+		
 	}
 }
 
@@ -28,6 +36,18 @@ class A1 {
 	void greeting() {
 		System.out.println("1");
 	}
+	
+	int getA() {
+		return a;
+	}
+	
+	A1 (int a) {
+		this.a = a;
+	}
+	
+	A1 () {
+		this(500);
+	}
 }
 
 class A2 extends A1 {
@@ -38,5 +58,13 @@ class A2 extends A1 {
 	
 	void greeting() {
 		System.out.println("2");
+	}
+	
+	A2 (int a) {
+		this.a = a;
+	}
+	
+	A2 () {
+		super(200);
 	}
 }
