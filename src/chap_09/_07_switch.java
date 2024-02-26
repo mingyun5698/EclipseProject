@@ -9,9 +9,7 @@ public class _07_switch {
 	
 	
 	public static void main(String[] args) {
-		C c = new C();
-		B b = new B();
-		T t = new T();
+		
 		
 		
 		
