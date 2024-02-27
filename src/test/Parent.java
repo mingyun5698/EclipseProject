@@ -17,14 +17,14 @@ public class Parent {
 }
 
 class Child extends Parent {
-    int x;
+    int x=123;
 
     Child() {
-        this(50);
+        super(50);
     }
 
     Child(int x) {
-        super.x = x;
+        this.x = x;
     }
     
 //    int getX() {
@@ -47,10 +47,9 @@ class main {
 		System.out.println(c2.getX());
 		System.out.println(c2.x);
 		
-		Child c3 = new Child(123);
+		Child c3 = new Child(1233);
 		System.out.println(c3.getX());
 		System.out.println(c3.x);
-
 	}
 	
 }

@@ -7,6 +7,7 @@ public class Management {
 
 		Dinasaur[] dino = new Dinasaur[3];
 		Employer[] emp = new Employer[3];
+		Dinasaur asd = new Dinasaur("비교", 0, "비교");
 		Scanner sc = new Scanner(System.in);
 		Ticket ticket = new Ticket();
 		Ticket ticket2 = new SeasonTicket();
@@ -16,7 +17,6 @@ public class Management {
 		public static void main(String[] args) {
 			Management management = new Management();
 			management.handleMenu();
-			
 		}
 
 
@@ -35,7 +35,9 @@ public class Management {
 			System.out.println("10번 : 티켓 관리");
 			System.out.println("11번 : 시즌 티켓 관리");
 			System.out.println("12번 : 특별손님 맞이");
-			System.out.println("13번 : 나가기");
+			System.out.println("13번 : 나이순으로 공룡 정렬");
+			System.out.println("14번 : 타입순으로 공룡 정렬");
+			System.out.println("15번 : 나가기");
 			System.out.print("번호를 입력해 주세요 >>");
 		}
 		void handleMenu() {
@@ -69,7 +71,11 @@ public class Management {
 			break;
 			case 12 : handleSpecialEvents();
 			break;
-			case 13 : System.out.println("메뉴를 종료합니다.");
+			case 13 : bubbleSort();
+			break;
+			case 14 : typeArray();
+			break;
+			case 15 : System.out.println("메뉴를 종료합니다.");
 			System.exit(0);
 
 			}
@@ -140,7 +146,6 @@ public class Management {
 		}
 		
 		void modifyDino() {
-			
 			while(true) {
 				System.out.println(" ");
 				for (int i=0; i<dino.length; i++) {
@@ -510,11 +515,75 @@ public class Management {
 				else {
 				System.out.print(dino[i].species + " ");
 				}
-			} 
+			}
 			System.out.println("가 있습니다.");
 			System.out.print("나가려면 아무거나 입력해주세요 >>");
 			String ex = sc.next();
 		}
+		
+		void bubbleSort() {
+			for (int i =0; i<dino.length-1; i++) {
+				for (int j=0; j<dino.length-(i+1); j++) {
+					if (dino[j].age > dino[j+1].age) {
+						asd = dino[j];
+						dino[j] = dino[j+1];
+						dino[j+1] = asd;
+					}
+					else continue;
+				}
+			}
+			
+			System.out.println(" ");
+			for (int i=0; i<dino.length; i++) {
+				
+				String dinoType = dino[i].dinoType();
+				
+				if (dino[i].name.equals("삭제된 공룡")) continue;
+				
+				else {
+				System.out.println(i + "번 공룡 : "  + dinoType + " 이름:" + dino[i].name + " 나이:" + dino[i].age + " 종:" + dino[i].species);
+				}
+			}
+			System.out.print("나가려면 아무거나 입력하세요 >>");
+			String ex = sc.next();
+		}
+		
+		void herbivorousDinotypeArray() {
+			System.out.print("초식공룡 : ");
+			for(int i=0; i<dino.length; i++) {
+				if (dino[i].dinoType().equals("초식공룡")) {
+					System.out.print(dino[i].species + " ");
+				} else continue;
+				System.out.println(" ");
+			}
+		}
+		void carnivorousDinotypeArray() {
+			System.out.print("육식공룡 : ");
+			for(int i=0; i<dino.length; i++) {
+				if (dino[i].dinoType().equals("육식공룡")) {
+					System.out.print(dino[i].species + " ");
+				} else continue;
+				System.out.println(" ");
+			}
+		}
+		void seaDinotypeArray() {
+			System.out.print("바다공룡 : ");
+			for(int i=0; i<dino.length; i++) {
+				if (dino[i].dinoType().equals("바다공룡")) {
+					System.out.print(dino[i].species + " ");
+				} else continue;
+				System.out.println(" ");
+			}
+			System.out.print("나가기 위해 아무거나 입력 >>");
+			String ex = sc.next();
+		}
+		
+		void typeArray() {
+			herbivorousDinotypeArray();
+			carnivorousDinotypeArray();
+			seaDinotypeArray();
+		}
+		
 }
 
 

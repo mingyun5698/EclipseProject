@@ -1,18 +1,30 @@
 package chap_11.management;
 
 
-abstract public class Dinasaur implements eatable {
+
+public class Dinasaur implements eatable {
 	String name;
 	int age;
 	String species;
 	
-	abstract String dinoType();
+	String dinoType() {
+		return "어쩌구";
+		}
 	
 	Dinasaur(String name, int age, String species) {
 		this.name = name;
 		this.age = age;
 		this.species = species;
 	}
+	
+	public void eat(Dinasaur dino) {
+		System.out.println("풀을 먹습니다.");
+	}
+	
+	
+
+	
+	
 
 
 }
