@@ -11,7 +11,6 @@ public class Management {
 		Management management = new Management();
 		management.creatinstance();
 		management.eat();
-		
 	}
 	
 		void creatinstance() {

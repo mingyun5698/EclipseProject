@@ -11,18 +11,14 @@ public class Ticket {
 	int addTicket(int add) {
 		remain[0] += add;
 		return this.remain[0];
-		
 	}
 	
 	
 	int deleteTicket(int use) {
-		
 		if(remain[0] < use) {
 			remain[0] = 0;
 		}
-		
 		else remain[0] -= use;
-		
 		return this.remain[0];
 	}
 }
