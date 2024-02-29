@@ -1,9 +1,9 @@
-package chap_12.management;
+package chap_12.Exception;
 import java.util.Scanner;
 
 public class Management {
 	
-	Dinosaur dino = new Dinosaur();
+	Dinosaur dinoo = new Dinosaur();
 	Scanner sc = new Scanner(System.in);
 	int a;
 	int b;
@@ -45,7 +45,7 @@ public class Management {
 			try {
 				System.out.print("공룡의 행복지수를 입력해주세요 0~100 >> " );
 				a = sc.nextInt();
-				dino.setHappyPoint(a);
+				dinoo.setHappyPoint(a);
 			} catch (DinosaurHappyException1 e) {
 				System.out.println("행복지수의 범위를 초과했습니다. 다시 입력해 주세요.");
 			} catch (DinosaurHappyException2 e) {
@@ -69,7 +69,7 @@ public class Management {
 			try {
 				System.out.print("공룡의 건강지수를 입력해주세요 0~10 >> " );
 				b = sc.nextInt();
-				dino.setHealthyPoint(b);;
+				dinoo.setHealthyPoint(b);;
 			} catch (DinosaurIllException1 e) {
 				System.out.println("건강지수의 범위를 초과했습니다. 다시 입력해 주세요.");
 			} catch (DinosaurIllException2 e) {
@@ -94,7 +94,7 @@ public class Management {
 			try {
 				System.out.print("공룡의 안전 지수를 입력해주세요 0~10 >> " );
 				c = sc.nextInt();
-				dino.setSafetyPoint(c);
+				dinoo.setSafetyPoint(c);
 			} catch (DinosaurSafetyException1 e) {
 				System.out.println("안전 지수의 범위를 초과했습니다. 다시 입력해 주세요.");
 			} catch (DinosaurSafetyException2 e) {

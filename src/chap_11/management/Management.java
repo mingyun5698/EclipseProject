@@ -1,18 +1,23 @@
 package chap_11.management;
 
 import java.util.Scanner;
+import chap_12.Exception.*;
+
+
 
 public class Management {
 
 
 		Dinasaur[] dino = new Dinasaur[3];
+		Dinasaur dinoo = new Dinasaur("예외", 0, "예외");
 		Employer[] emp = new Employer[3];
 		Dinasaur asd = new Dinasaur("비교", 0, "비교");
 		Scanner sc = new Scanner(System.in);
 		Ticket ticket = new Ticket();
 		Ticket ticket2 = new SeasonTicket();
-		
-
+		int a;
+		int b;
+		int c;
 
 		public static void main(String[] args) {
 			Management management = new Management();
@@ -37,8 +42,11 @@ public class Management {
 			System.out.println("12번 : 특별손님 맞이");
 			System.out.println("13번 : 나이순으로 공룡 정렬");
 			System.out.println("14번 : 타입순으로 공룡 정렬");
-			System.out.println("15번 : 나가기");
-			System.out.print("번호를 입력해 주세요 >>");
+			System.out.println("15번 : 공룡 행복 지수");
+			System.out.println("16번 : 공룡 건강 지수");
+			System.out.println("17번 : 공룡 안전 지수");
+			System.out.println("18번 : 나가기");
+			System.out.print("메뉴 번호를 입력해 주세요 >> ");
 		}
 		void handleMenu() {
 			while(true) {
@@ -75,7 +83,13 @@ public class Management {
 			break;
 			case 14 : typeArray();
 			break;
-			case 15 : System.out.println("메뉴를 종료합니다.");
+			case 15 : handleHappyPoint();
+			break;
+			case 16 : handleHealtyPoint();
+			break;
+			case 17 : handleSafetyPoint();
+			break;
+			case 18 : System.out.println("메뉴를 종료합니다.");
 			System.exit(0);
 
 			}
@@ -583,6 +597,81 @@ public class Management {
 			carnivorousDinotypeArray();
 			seaDinotypeArray();
 		}
+		
+		void handleHappyPoint() {
+			while(true) {
+				try {
+					System.out.print("공룡의 행복지수를 입력해주세요 0~100 >> " );
+					a = sc.nextInt();
+					dinoo.setHappyPoint(a);
+				} catch (DinosaurHappyException1 e) {
+					System.out.println("행복지수의 범위를 초과했습니다. 다시 입력해 주세요.");
+				} catch (DinosaurHappyException2 e) {
+					System.out.println("행복지수를 30점 이상으로 올려야힙니다.");
+					System.out.println("현재 행복 지수 : " + a);
+					break;
+				} catch (DinosaurHappyException3 e) {
+					System.out.println("현재 행복 지수 : " + a);
+					System.out.println("매우 건강합니다.");
+					break;
+				}
+					
+				
+				}
+			System.out.print("나가기 위해 아무거나 입력해하세요 >>" );
+			String ex = sc.next();
+			
+			}
+		
+		void handleHealtyPoint() {
+			while(true) {
+				try {
+					System.out.print("공룡의 건강지수를 입력해주세요 0~10 >> " );
+					b = sc.nextInt();
+					dinoo.setHealthyPoint(b);;
+				} catch (DinosaurIllException1 e) {
+					System.out.println("건강지수의 범위를 초과했습니다. 다시 입력해 주세요.");
+				} catch (DinosaurIllException2 e) {
+					System.out.println("건강지수를 3점 이상으로 올려야합니다.");
+					System.out.println("현재 건강 지수 : " + b);
+					break;
+				} catch (DinosaurIllException3 e) {
+					System.out.println("현재 건강 지수 : " + b);
+					System.out.println("매우 건강합니다.");
+					break;
+				}
+					
+
+				
+				}
+			System.out.print("나가기 위해 아무거나 입력해하세요 >>" );
+			String ex = sc.next();
+			
+			}
+		
+		void handleSafetyPoint() {
+			while(true) {
+				try {
+					System.out.print("공룡의 안전 지수를 입력해주세요 0~10 >> " );
+					c = sc.nextInt();
+					dinoo.setSafetyPoint(c);
+				} catch (DinosaurSafetyException1 e) {
+					System.out.println("안전 지수의 범위를 초과했습니다. 다시 입력해 주세요.");
+				} catch (DinosaurSafetyException2 e) {
+					System.out.println("안전 지수를 5점 이상으로 올려야합니다.");
+					System.out.println("현재 안전 지수 : " + c);
+					break;
+				} catch (DinosaurSafetyException3 e) {
+					System.out.println("현재 안전 지수 : " + c);
+					System.out.println("매우 안전합니다.");
+					break;
+				}
+				
+				}
+			System.out.print("나가기 위해 아무거나 입력해하세요 >>" );
+			String ex = sc.next();
+
+			}
 		
 }
 
