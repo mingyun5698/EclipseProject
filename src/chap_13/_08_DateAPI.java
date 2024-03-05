@@ -1,9 +1,4 @@
 package chap_13;
-import java.time.Duration;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.LocalTime;
-import java.time.Period;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.time.*;
@@ -13,6 +8,8 @@ public class _08_DateAPI {
 	public static void main(String[] args) {
 		LocalDateTime now = LocalDateTime.now();
 		System.out.println(now);
+		
+		
 		
 		LocalDate L1 = LocalDate.of(2024,3,1);
 		LocalTime L2 = LocalTime.of(15, 3, 30);
